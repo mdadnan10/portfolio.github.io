@@ -1,0 +1,135 @@
+:root {
+  --color-1: #fb839e;
+  --color-2: #ec9412;
+  --color-3: #1fc586;
+  --color-4: #2eb1ed;
+  --color-5: #cc3a3b;
+  --bg-black-900: #000000;
+  --bg-black-100: #dddddd;
+  --bg-black-50: #eff0f4;
+  --bg-opacity: rgba(255, 255, 255, 0.5);
+  --text-black-900: #000000;
+  --text-black-700: #555555;
+  --text-black-600: #666666;
+  --text-black-300: #bbbbbb;
+  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
+  --inner-shadow: inset 3px 3px 3px #d0d0d0,
+        inset -3px -3px 3px #f8f8f8;
+  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+
+body.dark {
+  --bg-black-900: #ffffff;
+  --bg-black-100: #353535;
+  --bg-black-50: #2b2c2f;
+  --bg-opacity: rgba(43, 44, 47, 0.5);
+  --text-black-900: #ffffff;
+  --text-black-700: #ffffff;
+  --text-black-600: #bbbbbb;
+  --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+  --outer-shadow-0: 0 0 0 222327,
+            0 0 0 #363636;
+  --inner-shadow: inset 3px 3px 3px #222327,
+            inset -3px -3px 3px #363636;
+  --inner-shadow-0: inset 0 0 0 #222327,
+            inset 0 0 0 #363636;
+}
+
+.style-switcher {
+  position: fixed;
+  right: 0;
+  top: 77px;
+  padding: 15px;
+  width: 200px;
+  z-index: 101;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.style-switcher .s-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-black-900);
+  right: 100%;
+  margin-right: 15px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.style-switcher .s-icon::after {
+  border-radius: 50%;
+}
+
+.style-switcher .s-icon i {
+  line-height: 40px;
+}
+
+.style-switcher .style-switcher-toggler {
+  top: 0;
+}
+
+.style-switcher .day-night {
+  top: 55px;
+}
+
+.style-switcher h4 {
+  margin: 0 0 10px;
+  color: var(--text-black-700);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.style-switcher .colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.style-switcher .colors span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.style-switcher .color-1 {
+  background-color: var(--color-1);
+}
+
+.style-switcher .color-2 {
+  background-color: var(--color-2);
+}
+
+.style-switcher .color-3 {
+  background-color: var(--color-3);
+}
+
+.style-switcher .color-4 {
+  background-color: var(--color-4);
+}
+
+.style-switcher .color-5 {
+  background-color: var(--color-5);
+}
+
+.style-switcher.open {
+  -webkit-transform: translateX(-15px);
+          transform: translateX(-15px);
+}
+/*# sourceMappingURL=style-switcher.css.map */
