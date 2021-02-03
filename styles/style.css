@@ -540,11 +540,11 @@ img {
 }
 
 .about-section .about-info .btn-1 {
-  margin: 30px 20px 0 0;
+  margin: 10px 20px 0 0;
 }
 
 .about-section .about-tabs {
-  padding: 60px 15px 50px;
+  padding: 100px 15px 50px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 100%;
           flex: 0 0 100%;
