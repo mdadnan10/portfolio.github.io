@@ -249,50 +249,50 @@ function bodyScrollingToggle() {
 
 /*----------------------------- testimonial section ------------------------------*/
 
-(() => {
+// (() => {
 
-    const sliderContainer = document.querySelector(".testimonial-slider-container"),
-        slides = sliderContainer.querySelectorAll(".testimonial-item"),
-        slideWidth = sliderContainer.offsetWidth,
-        prevBtn = document.querySelector(".testimonial-slider-nav .prev"),
-        nextBtn = document.querySelector(".testimonial-slider-nav .next"),
-        activeSlide = sliderContainer.querySelector(".testimonial-item.active");
-    let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
+//     const sliderContainer = document.querySelector(".testimonial-slider-container"),
+//         slides = sliderContainer.querySelectorAll(".testimonial-item"),
+//         slideWidth = sliderContainer.offsetWidth,
+//         prevBtn = document.querySelector(".testimonial-slider-nav .prev"),
+//         nextBtn = document.querySelector(".testimonial-slider-nav .next"),
+//         activeSlide = sliderContainer.querySelector(".testimonial-item.active");
+//     let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
 
-    // set width off all slides 
-    slides.forEach((slide) => {
-        slide.style.width = slideWidth + "px";
-    })
-    // set width of slider Container
-    sliderContainer.style.width = slideWidth * slides.length + "px";
+//     // set width off all slides 
+//     slides.forEach((slide) => {
+//         slide.style.width = slideWidth + "px";
+//     })
+//     // set width of slider Container
+//     sliderContainer.style.width = slideWidth * slides.length + "px";
 
-    nextBtn.addEventListener("click", () => {
-        if (slideIndex === slides.length - 1) {
-            slideIndex = 0;
-        } else {
-            slideIndex++;
-        }
-        slider();
-    })
+//     nextBtn.addEventListener("click", () => {
+//         if (slideIndex === slides.length - 1) {
+//             slideIndex = 0;
+//         } else {
+//             slideIndex++;
+//         }
+//         slider();
+//     })
 
-    prevBtn.addEventListener("click", () => {
-        if (slideIndex === 0) {
-            slideIndex = slides.length - 1;
-        } else {
-            slideIndex--;
-        }
-        slider();
-    })
+//     prevBtn.addEventListener("click", () => {
+//         if (slideIndex === 0) {
+//             slideIndex = slides.length - 1;
+//         } else {
+//             slideIndex--;
+//         }
+//         slider();
+//     })
 
-    function slider() {
-        // deactivate existing active slides
-        sliderContainer.querySelector(".testimonial-item.active").classList.remove("active");
-        // activate new slide 
-        slides[slideIndex].classList.add("active");
-        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
-    }
+//     function slider() {
+//         // deactivate existing active slides
+//         sliderContainer.querySelector(".testimonial-item.active").classList.remove("active");
+//         // activate new slide 
+//         slides[slideIndex].classList.add("active");
+//         sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
+//     }
 
-})();
+// })();
 
 /*---------------- hide all section except active section -------------------*/
 
